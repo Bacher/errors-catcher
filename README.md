@@ -13,7 +13,7 @@ require('errors-catcher').catchExceptions();
 require('errors-catcher').catchRejections();
 ```
 
-Without "errors-catcher" this code executed successful:
+Without "errors-catcher" this code will be executed successfully:
 ```javascript
 function makeSomething() {
     return new Promise(resolve => {
