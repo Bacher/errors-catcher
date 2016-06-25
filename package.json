@@ -1,6 +1,6 @@
 {
   "name": "errors-catcher",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Catch unhandled rejection and uncaught exception",
   "main": "errors-catcher.js",
   "scripts": {
@@ -15,7 +15,7 @@
     "name": "Ilya 'Bacher' Lebedev",
     "email": "bacherko@gmail.com"
   },
-  "license": "GPL-2.0",
+  "license": "ISC",
   "files": [
     "errors-catcher.js"
   ]

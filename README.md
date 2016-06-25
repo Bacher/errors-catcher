@@ -1,8 +1,19 @@
 
 # Errors-catcher
-Catch uncaught exception and unhandled rejections
+Catch uncaught exception and unhandled rejections.
 
-Without lib this code executed successful:
+```javascript
+// Catch both and terminate application:
+require('errors-catcher').catchAll();
+
+// Catch exceptions and terminate application:
+require('errors-catcher').catchExceptions();
+
+// Catch promise rejections and terminate application:
+require('errors-catcher').catchRejections();
+```
+
+Without "errors-catcher" this code executed successful:
 ```javascript
 function makeSomething() {
     return new Promise(resolve => {
@@ -11,12 +22,11 @@ function makeSomething() {
 }
 
 makeSomething();
-
 ```
 
-With **Errors-catcher** you will see:
+With **errors-catcher** you will see:
 ```
-[Unhandled Rejection] at: Promise Promise {
+[Unhandled Rejection] at: Promise {
   <rejected> ReferenceError: unresponsibleObject is not defined
     at resolve (/home/ilebedev/projects/errors-catcher/test.js:6:9)
     at makeSomething (/home/ilebedev/projects/errors-catcher/test.js:5:12)
